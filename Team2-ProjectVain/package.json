@@ -1,0 +1,33 @@
+{
+  "name": "team2-projectvain",
+  "version": "1.0.0",
+  "description": "contains the command to start both the front and backend for vain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd vain-client && npm run serve",
+    "server": "cd vain-backend && npm run serve",
+    "start": "concurrently \"npm run client\" \"npm run server\" ",
+    "generate": "json-server ./db/generate.js",
+    "unittest": "json-server ./db/books.json & vue-cli-service serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingColton1/Team2-ProjectVain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingColton1/Team2-ProjectVain/issues"
+  },
+  "homepage": "https://github.com/KingColton1/Team2-ProjectVain#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "faker": "^5.5.3",
+    "json-server": "^0.17.0",
+    "lodash": "^4.17.21"
+  }
+}
